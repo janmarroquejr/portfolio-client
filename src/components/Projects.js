@@ -7,7 +7,7 @@ const Projects = () => {
 			<Heading size="2">
 				<h1 className="heading-text">Projects</h1>
 			</Heading>
-			<Heading size="6">
+			<Heading size="6" subtitle>
 				We are a multidisciplinary dev team, specializing in mobile product design, branding and illustration.
 			</Heading>
 		</Container>
