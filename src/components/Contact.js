@@ -1,6 +1,5 @@
 import React from "react";
 import {Container, Columns, Button} from "react-bulma-components"
-import { Map, GoogleApiWrapper } from 'google-maps-react';
 
 const Contact = () => {
 	return(

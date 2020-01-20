@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Container, Columns, Button, Hero, Tabs} from "react-bulma-components"
+import {Hero, Tabs} from "react-bulma-components"
 
 
 const HeroFooter = (props) => {
@@ -10,7 +10,7 @@ const HeroFooter = (props) => {
 
 
 	const clickEventAbout = () => {
-		if(about == false){
+		if(about === false){
 			setAbout(true);
 			setContact(false);
 			setProjects(false);
@@ -19,7 +19,7 @@ const HeroFooter = (props) => {
 	}
 
 	const clickEventContact = () => {
-		if(contact == false){
+		if(contact === false){
 			setContact(true);
 			setAbout(false);
 			setProjects(false);
@@ -28,7 +28,7 @@ const HeroFooter = (props) => {
 	}
 
 	const clickEventProjects = () => {
-		if(projects == false){
+		if(projects === false){
 			setProjects(true);
 			setAbout(false);
 			setContact(false);

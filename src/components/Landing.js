@@ -16,7 +16,7 @@ const Landing = () => {
 
         <Columns.Column size="half">
         	<div id="img">
-        		<img src="/images/pic.jpg"/>
+        		<img src="/images/pic.jpg" alt="null"/>
         	</div>
         </Columns.Column>
       </Columns>

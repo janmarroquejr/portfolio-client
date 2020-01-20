@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
-import {Hero, Container, Heading, Button} from "react-bulma-components";
+import {Hero} from "react-bulma-components";
 
 import About from "./components/About"
 import Contact from "./components/Contact"
@@ -29,58 +28,53 @@ function App() {
     setComponentToShow("Landing")
   }
 
-  if(whichComponentToShow == "About"){
+  if(whichComponentToShow === "About"){
     return (
         <Hero size="fullheight" color="danger" gradient>
           <Hero.Body>
             <About/>
           </Hero.Body>
-          
-            <HeroFooter components={[about, contact, projects, landing]}/>
-          
-          
+          <HeroFooter components={[about, contact, projects, landing]}/>
         </Hero>
     );
   }
-
-  else if(whichComponentToShow == "Contact"){
+          
+  else if(whichComponentToShow === "Contact"){
     return (
         <Hero size="fullheight" color="primary" gradient>
           <Hero.Body>
             <Contact/>
           </Hero.Body>
-          
-            <HeroFooter components={[about, contact, projects, landing]}/>
-          
+          <HeroFooter components={[about, contact, projects, landing]}/>
         </Hero>
     );
   }
-  else if(whichComponentToShow == "Projects"){
+          
+          
+  else if(whichComponentToShow === "Projects"){
     return (
         <Hero size="fullheight" color="info" gradient>
           <Hero.Body>
             <Projects/>
           </Hero.Body>
-          
-            <HeroFooter components={[about, contact, projects, landing]}/>
-         
+          <HeroFooter components={[about, contact, projects, landing]}/>
         </Hero>
     );
   }
+          
+         
 
-  else if(whichComponentToShow == "Landing"){
+  else if(whichComponentToShow === "Landing"){
     return(
       <Hero size="fullheight" color="info" gradient>
           <Hero.Body>
            <Landing />
           </Hero.Body>
-          
-            <HeroFooter components={[about, contact, projects, landing]}/>
-          
+          <HeroFooter components={[about, contact, projects, landing]}/>
         </Hero>
     )
   }
-
+          
   else{
     return(
       <h1 className="has-text-center"> This page does not exist</h1>
@@ -89,7 +83,12 @@ function App() {
 }
 
 export default App;
+          
+
            
 
             
             
+          
+          
+
