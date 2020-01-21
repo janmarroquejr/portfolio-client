@@ -3,7 +3,7 @@ import { Container, Heading } from "react-bulma-components"
 
 const About = () => {
 	return(
-		<Container className="has-text-centered animated heartBeat" fluid>
+		<Container className="has-text-centered animated wobble" fluid>
 			<Heading size={2}>
 				Web Development is our passion.
 			</Heading>

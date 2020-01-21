@@ -6,30 +6,6 @@ var nodemailer = require('nodemailer');
 
 
 
-const sendEmail = () => {
-	var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'youremail@gmail.com',
-    pass: 'yourpassword'
-  }
-});
-
-var mailOptions = {
-  from: document.getElementById('email'),
-  to: 'janmarroquejr@gmail.com',
-  subject: 'Request',
-  text: document.getElementById('comments').value
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
-}
 	return(
 		<Container className="has-text-center animated bounceInDown">
 			<Columns>

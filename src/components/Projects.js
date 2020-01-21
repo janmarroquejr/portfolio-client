@@ -21,7 +21,7 @@ const Projects = () => {
 				<Columns.Column className="project">
 					<Heading size={2}>
 						
-							<a href="https://arcane-eyrie-90382.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+							<a href="http://arcane-eyrie-90382.herokuapp.com/" target="_blank" rel="noopener noreferrer">
 								<img className="link-image" src="/images/highersteaks.png" alt=""/>
 							</a>
 						
