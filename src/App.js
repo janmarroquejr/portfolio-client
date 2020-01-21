@@ -31,10 +31,10 @@ function App() {
   if(whichComponentToShow === "About"){
     return (
         <Hero size="fullheight" color="danger" gradient>
+          <HeroFooter components={[about, contact, projects, landing]}/>
           <Hero.Body>
             <About/>
           </Hero.Body>
-          <HeroFooter components={[about, contact, projects, landing]}/>
         </Hero>
     );
   }
@@ -42,10 +42,10 @@ function App() {
   else if(whichComponentToShow === "Contact"){
     return (
         <Hero size="fullheight" color="primary" gradient>
+          <HeroFooter components={[about, contact, projects, landing]}/>
           <Hero.Body>
             <Contact/>
           </Hero.Body>
-          <HeroFooter components={[about, contact, projects, landing]}/>
         </Hero>
     );
   }
@@ -53,11 +53,11 @@ function App() {
           
   else if(whichComponentToShow === "Projects"){
     return (
-        <Hero size="fullheight" color="info" gradient>
+        <Hero size="fullheight" className="my-projects">
+          <HeroFooter components={[about, contact, projects, landing]}/>
           <Hero.Body>
             <Projects/>
           </Hero.Body>
-          <HeroFooter components={[about, contact, projects, landing]}/>
         </Hero>
     );
   }
@@ -66,11 +66,11 @@ function App() {
 
   else if(whichComponentToShow === "Landing"){
     return(
-      <Hero size="fullheight" color="info" gradient>
+      <Hero size="fullheight" color="dark" gradient>
+          <HeroFooter components={[about, contact, projects, landing]}/>
           <Hero.Body>
            <Landing />
           </Hero.Body>
-          <HeroFooter components={[about, contact, projects, landing]}/>
         </Hero>
     )
   }

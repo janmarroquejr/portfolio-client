@@ -6,16 +6,16 @@ const Landing = () => {
 		<Container>
 			<Columns>
 				<Columns.Column size="half">
-         <Heading size={1}>
-          <h1 className="heading-text">Janmar Roque</h1>
+         <Heading size={1} className="animated zoomInLeft">
+          Janmar Roque
          </Heading>
-          <Heading subtitle size={4}>
+          <Heading subtitle size={4} className="animated jackInTheBox">
                 Web Developer Portfolio
          	</Heading>
         </Columns.Column>
 
         <Columns.Column size="half">
-        	<div id="img">
+        	<div id="img" className="animated jello">
         		<img src="/images/pic.jpg" alt="null"/>
         	</div>
         </Columns.Column>

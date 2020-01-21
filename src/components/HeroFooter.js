@@ -6,16 +6,16 @@ const HeroFooter = (props) => {
 	const [about, setAbout] = useState(false);
 	const [contact, setContact] = useState(false);
 	const [projects, setProjects] = useState(false);
-	const [component, setComponent] = useState(props.components[3])
-
+	const [landing, setLanding] = useState(true);
 
 	const clickEventAbout = () => {
 		if(about === false){
 			setAbout(true);
 			setContact(false);
 			setProjects(false);
+			setLanding(false);
 		}
-		setComponent(props.components[0])
+		props.components[0]()
 	}
 
 	const clickEventContact = () => {
@@ -23,8 +23,9 @@ const HeroFooter = (props) => {
 			setContact(true);
 			setAbout(false);
 			setProjects(false);
+			setLanding(false);
 		}
-		setComponent(props.components[1])
+		props.components[1]()
 	}
 
 	const clickEventProjects = () => {
@@ -32,14 +33,29 @@ const HeroFooter = (props) => {
 			setProjects(true);
 			setAbout(false);
 			setContact(false);
+			setLanding(false);
 		}
-		setComponent(props.components[2])
+		props.components[2]()
+	}
+
+	const clickEventLanding = () => {
+		if(projects === false){
+			setProjects(false);
+			setAbout(false);
+			setContact(false);
+			setLanding(true);
+		}
+		props.components[3]()
 	}
 	
 	return(
-		<Hero.Footer>
+		<Hero.Head>
 			
-			<Tabs fullwidth="true" type="boxed">
+			<Tabs fullwidth={true} type="boxed">
+				<Tabs.Tab onClick={clickEventLanding} active={landing}>
+					Landing
+				</Tabs.Tab>
+
 				<Tabs.Tab onClick={clickEventAbout} active={about}>
 					About
 				</Tabs.Tab>
@@ -52,8 +68,9 @@ const HeroFooter = (props) => {
 					Projects
 				</Tabs.Tab>
 			</Tabs>
+
 			
-		</Hero.Footer>
+		</Hero.Head>
 	)
 }
 

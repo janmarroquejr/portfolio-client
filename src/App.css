@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px #000;
 }
 
 .heading-text{
@@ -21,10 +22,41 @@
   align-items: center;
 }
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    #gmap{
+    height: 100%;
+    width: 100%;
+    border: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
 #img img{
   border-radius: 50%;
   border: 3px solid black;
 }
+
+.link-image{
+  border-radius: 15px;
+}
+
+.projects{
+  border: 2px groove black;
+  border-radius: 30px;
+  background: url();
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.my-projects{
+  background: url("/images/bg1.jpg");
+  object-fit: contain;
+}
+
+.my-projects{
+  color: white;
+}
+
 
 
 /*
