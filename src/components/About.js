@@ -37,62 +37,64 @@ const About = () => {
 		</div>
 		
 		<div className="about-me">
-			<Columns size={12}>
-				<Columns.Column size={2}>
+			<div className="skills">
+			<Columns size={8}>
+				<Columns.Column size={1} className="logo-container">
 					<img src="/images/html.png" className="logo"/>
 				</Columns.Column>
-				<Columns.Column size={2}>
+				<Columns.Column size={1} className="logo-container">
 					<img src="/images/css.png" className="logo"/>
 				</Columns.Column>
-				<Columns.Column size={2}>
+				<Columns.Column size={1} className="logo-container">
 					<img src="/images/bootstrap.png" className="logo"/>
 				</Columns.Column>
-				<Columns.Column size={2}>
+				<Columns.Column size={1} className="logo-container">
 					<img src="/images/js.png" className="logo"/>
 				</Columns.Column>
-				<Columns.Column size={2}>
+				<Columns.Column size={1} className="logo-container">
 					<img src="/images/jquery.png" className="logo"/>
 				</Columns.Column>
-				<Columns.Column size={2}>
-					<img src="/images/laravel.png" className="logo"/>
-				</Columns.Column>
-			</Columns>
-
-			<Columns size={12}>
-				<Columns.Column size={2}>
-					<img src="/images/php.png" className="logo"/>
-				</Columns.Column>
-				<Columns.Column size={2}>
-					<img src="/images/mongo.png" className="logo"/>
-				</Columns.Column>
-				<Columns.Column size={2}>
+				<Columns.Column size={1} className="logo-container">
 					<img src="/images/express.png" className="logo"/>
 				</Columns.Column>
-				<Columns.Column size={2}>
-					<img src="/images/react.png" className="logo"/>
-				</Columns.Column>
-				<Columns.Column size={2}>
-					<img src="/images/node.png" className="logo"/>
-				</Columns.Column>
-				<Columns.Column size={2}>
-					<img src="/images/git.png" className="logo"/>
-				</Columns.Column>
-			</Columns>
-
-			<Columns size={12}>
-				<Columns.Column size={2}>
-					<img src="/images/mysql.png" className="logo"/>
-				</Columns.Column>
-				<Columns.Column size={2}>
-					<img src="/images/graphql.png" className="logo"/>
-				</Columns.Column>
-				<Columns.Column size={2}>
+				<Columns.Column size={1} className="logo-container">
 					<img src="/images/bulma.png" className="logo"/>
 				</Columns.Column>
-				<Columns.Column size={2}>
+				<Columns.Column size={1} className="logo-container">
 					<img src="/images/heroku.png" className="logo"/>
 				</Columns.Column>
 			</Columns>
+				
+
+			<Columns size={8}>
+				
+				<Columns.Column size={1} className="logo-container">
+					<img src="/images/react.png" className="logo"/>
+				</Columns.Column>
+				<Columns.Column size={1} className="logo-container">
+					<img src="/images/node.png" className="logo"/>
+				</Columns.Column>
+				<Columns.Column size={1} className="logo-container">
+					<img src="/images/git.png" className="logo"/>
+				</Columns.Column>
+				<Columns.Column size={1} className="logo-container">
+					<img src="/images/laravel.png" className="logo"/>
+				</Columns.Column>
+				<Columns.Column size={1} className="logo-container">
+					<img src="/images/php.png" className="logo"/>
+				</Columns.Column>
+				<Columns.Column size={1} className="logo-container">
+					<img src="/images/mongo.png" className="logo"/>
+				</Columns.Column>
+				<Columns.Column size={1} className="logo-container">
+					<img src="/images/mysql.png" className="logo"/>
+				</Columns.Column>
+				<Columns.Column size={1} className="logo-container">
+					<img src="/images/graphql.png" className="logo"/>
+				</Columns.Column>
+				
+			</Columns>
+			</div>
 		</div>
 
 		</Container>

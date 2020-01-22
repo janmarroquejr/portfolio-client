@@ -93,7 +93,11 @@
   border-radius: 50px;
   height: 100%;
   width: 100%;
-  margin-bottom: 5rem;
+  margin: auto;
+}
+
+.skills{
+  margin-left: 3rem;
 }
 
 .about-inner{
@@ -101,8 +105,11 @@
 }
 
 .logo{
-  max-height: 100px;
-  max-width: 100px;
+  max-height: 120px;
+  max-width: 120px;
+}
+
+.logo-container{
   margin: 1rem;
 }
 
