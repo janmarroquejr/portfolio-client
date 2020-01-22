@@ -34,7 +34,12 @@
 
 #img img{
   border-radius: 50%;
-  border: 3px solid black;
+  max-height: 50vh;
+  max-width: 50vw;
+}
+
+#img{
+  padding: 3rem;
 }
 
 .link-image{
@@ -47,20 +52,184 @@
 }
 
 .projects{
-  border: 2px groove black;
+  /*border: 2px groove black;*/
   border-radius: 30px;
   background: url();
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .my-projects{
-  background: url("/images/bg1.jpg");
+  /*background: url("/images/bg1.jpg");*/
   object-fit: contain;
+}
+
+.landing{
+ /* background: url("/images/bglanding.jpg");
+  object-fit: cover;*/
+}
+
+.landing-mid{
+  /*background: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  height: 50vh;
+  width: 50vh;*/
+}
+
+.landing-inner p, .landing-inner h1{
+  color: #fff;
 }
 
 .my-projects{
   color: white;
 }
+
+.links{
+  color: 000;
+}
+
+.about-me{
+  background-color: rgba(0,0,0,0.3);
+  /*border: 2px solid black;*/
+  border-radius: 50px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.about-inner{
+  padding: 3rem;
+}
+
+.logo{
+  max-height: 100px;
+  max-width: 100px;
+  margin: 1rem;
+}
+
+/*background*/
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.social-network a.icoRss:hover {
+  background-color: #F56505;
+}
+
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+}
+
+.social-network a.icoInstagram:hover{
+  background-color: #bc2a8d;
+}
+
+.social-network a.icoTwitter:hover {
+  background-color: #33ccff;
+}
+
+.social-network a.icoGoogle:hover {
+  background-color: #BD3518;
+}
+
+.social-network a.icoVimeo:hover {
+  background-color: #0590B8;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+
+.social-network a.icoRss:hover i,
+.social-network a.icoFacebook:hover i,
+.social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i,
+.social-network a.icoVimeo:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+
+a.socialIcon:hover,
+.socialHoverClass {
+  color: #44BCDD;
+}
+
+.social-circle a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+}
+
+.social-circle i {
+  margin: 0;
+  line-height: 80px;
+  text-align: center;
+}
+
+.social-circle a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #fff;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+a {
+  /*background-color: #D3D3D3;*/
+}
+
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
 
 
 

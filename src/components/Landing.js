@@ -3,22 +3,17 @@ import { Container, Heading, Columns } from "react-bulma-components"
 
 const Landing = () => {
 	return(
-		<Container>
+		<Container className="has-text-centered landing-mid animated bounceInDown">
 			<Columns>
-				<Columns.Column size="half">
-         <Heading size={1} className="animated zoomInLeft">
-          Janmar Roque
-         </Heading>
-          <Heading subtitle size={4} className="animated jackInTheBox">
-                Web Developer Portfolio
+				<Columns.Column size={12} className="landing-inner">
+          <Heading size={1}>
+            <h1>Hello, I'm Janmar Roque</h1>
+          </Heading>
+          <Heading size={4}>
+            <p>And this is my portfolio</p>
          	</Heading>
         </Columns.Column>
 
-        <Columns.Column size="half">
-        	<div id="img" className="animated jello">
-        		<img src="/images/pic.jpg" alt="null"/>
-        	</div>
-        </Columns.Column>
       </Columns>
     </Container>
 	)

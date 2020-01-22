@@ -39,7 +39,7 @@ const HeroFooter = (props) => {
 	}
 
 	const clickEventLanding = () => {
-		if(projects === false){
+		if(landing === false){
 			setProjects(false);
 			setAbout(false);
 			setContact(false);
@@ -53,19 +53,19 @@ const HeroFooter = (props) => {
 			
 			<Tabs fullwidth={true} type="boxed">
 				<Tabs.Tab onClick={clickEventLanding} active={landing}>
-					Landing
+					<p className="links has-text-light">Landing</p>
 				</Tabs.Tab>
 
-				<Tabs.Tab onClick={clickEventAbout} active={about}>
-					About
+				<Tabs.Tab onClick={clickEventAbout} active={about} >
+					<p className="links has-text-light">About</p>
 				</Tabs.Tab>
 				
-				<Tabs.Tab onClick={clickEventContact} active={contact}>
-					Contact
+				<Tabs.Tab onClick={clickEventContact} active={contact} >
+					<p className="links has-text-light">Contact</p>
 				</Tabs.Tab>
 					
 				<Tabs.Tab onClick={clickEventProjects} active={projects}>
-					Projects
+					<p className="links has-text-light">Projects</p>
 				</Tabs.Tab>
 			</Tabs>
 

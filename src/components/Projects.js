@@ -3,7 +3,8 @@ import { Container, Heading, Columns } from "react-bulma-components"
 
 const Projects = () => {
 	return(
-		<Container className="has-text-centered animated rollIn">
+		<Container className="has-text-centered animated bounceInDown">
+			<Heading size={1} className="has-text-light">My Sample Projects</Heading>
 			<Columns className="projects">
 				<Columns.Column className="project">
 					<Heading size={2}>
@@ -13,8 +14,8 @@ const Projects = () => {
 							</a>
 						
 					</Heading>
-					<Heading size={6} subtitle className="project-sub">
-						Static ecommerce website, focused on mobile responsiveness.
+					<Heading size={6} subtitle className="project-sub has-text-light">
+						Static ecommerce website, focused on mobile responsiveness using HTML, CSS, and Bootstrap. Hosted on GitLab.
 					</Heading>
 				</Columns.Column>
 
@@ -26,8 +27,8 @@ const Projects = () => {
 							</a>
 						
 					</Heading>
-					<Heading size={6} subtitle className="project-sub">
-						Restaurant booking website using Laravel. Hosted by Heroku and remotemysql.com.
+					<Heading size={6} subtitle className="project-sub has-text-light">
+						Restaurant booking website using Laravel. Hosted on Heroku and remotemysql.com.
 					</Heading>
 				</Columns.Column>
 
@@ -39,7 +40,7 @@ const Projects = () => {
 							</a>
 						
 					</Heading>
-					<Heading size={6} subtitle className="project-sub">
+					<Heading size={6} subtitle className="project-sub has-text-light">
 						Booking website.
 					</Heading>
 				</Columns.Column>
