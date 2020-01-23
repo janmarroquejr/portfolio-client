@@ -8,6 +8,7 @@ const Contact = () => {
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [message, setMessage] = useState('')
+	let errorHandler = 0;
 
 	const nameInputHandler = e => {
 		setName(e.target.value)
@@ -28,9 +29,11 @@ const Contact = () => {
 		formData.message = message;
 		let errorHandler = 0;
 
-		if(name == undefined || email == undefined || message == undefined){
+		if(name == '' || email == '' || message == ''){
 			errorHandler++;
 		}
+
+		console.log(errorHandler)
 		
 		fetch("http://infinite-castle-42364.herokuapp.com/send", {
 			method: 'POST',
@@ -45,20 +48,23 @@ const Contact = () => {
 		.then(res => {
 			console.log(res.data.message)
 			
-			if(res.data.message === "message_not_sent"){
-				Swal.fire({
-				  icon: 'error',
-				  title: 'Oops...',
-				  text: 'An error occurred while sending your message! :('
-				})			
+			if(res.data.message === "message_not_sent" || errorHandler > 0){
+				if(res.data.message === "message_not_sent"){
+					Swal.fire({
+					  icon: 'error',
+					  title: 'Oops...',
+					  text: 'An error occurred while sending your message! :('
+					})	
+				}
+				if(errorHandler > 0){
+					Swal.fire({
+					  icon: 'error',
+					  title: 'Oops...',
+					  text: 'Please make sure you fill in all fields.'
+					})	
+				}		
 			}
-			else if(errorHandler > 0){
-				Swal.fire({
-				  icon: 'error',
-				  title: 'Oops...',
-				  text: 'One or more of the fields are empty!'
-				})	
-			}
+
 			else{
 				Swal.fire({
 				  icon: 'success',
