@@ -25,7 +25,7 @@ const About = () => {
 				<Columns.Column>
 
 					<div id="img" >
-						<img src="/images/temp.jpg" alt="null"/>
+						<img src="/images/pic.png" alt="null"/>
 					</div>
 
 				</Columns.Column>
