@@ -1,7 +1,76 @@
-import React from "react";
+import React, {useState} from "react";
 import {Container, Columns, Button, Heading} from "react-bulma-components"
+import Swal from 'sweetalert2'
+
 
 const Contact = () => {
+	var formData = new FormData();
+	const [name, setName] = useState('')
+	const [email, setEmail] = useState('')
+	const [message, setMessage] = useState('')
+
+	const nameInputHandler = e => {
+		setName(e.target.value)
+		console.log(name)
+	}
+
+	const emailInputHandler = e => {
+		setEmail(e.target.value)
+	}
+
+	const messageInputHandler = e => {
+		setMessage(e.target.value)
+	}
+
+	const submitFormClickHandler = () => {
+		formData.name = name;
+		formData.userEmail = email;
+		formData.message = message;
+		let errorHandler = 0;
+
+		if(name == undefined || email == undefined || message == undefined){
+			errorHandler++;
+		}
+		
+		fetch("http://infinite-castle-42364.herokuapp.com/send", {
+			method: 'POST',
+			headers: {
+				"Content-Type" : "application/json"
+			},
+			body: JSON.stringify(formData)
+		})
+		.then(res => {
+			return res.json();	
+		})
+		.then(res => {
+			console.log(res.data.message)
+			
+			if(res.data.message === "message_not_sent"){
+				Swal.fire({
+				  icon: 'error',
+				  title: 'Oops...',
+				  text: 'An error occurred while sending your message! :('
+				})			
+			}
+			else if(errorHandler > 0){
+				Swal.fire({
+				  icon: 'error',
+				  title: 'Oops...',
+				  text: 'One or more of the fields are empty!'
+				})	
+			}
+			else{
+				Swal.fire({
+				  icon: 'success',
+				  title: 'Great!',
+				  text: 'Your message was sent!'
+				})	
+			}
+			setName('')
+			setEmail('')
+			setMessage('')
+		})
+	}
 
 	return(
 		<Container className="has-text-center animated bounceInDown" fluid>
@@ -23,23 +92,44 @@ const Contact = () => {
 				</div>
 
 				<Columns.Column className="has-text-left" size={5}>
-					<form>
+					<form id="myForm">
 						<label className="label has-text-light">Name</label>
 						<div className="control">
-							<input type="text"  id="name" className="input"/>
+							<input 
+								type="text"  
+								id="name" 
+								className="input" 
+								onChange={nameInputHandler}
+								value={name}
+								placeholder="Name"
+							/>
 						</div>
 
 						<label className="label has-text-light">E-mail</label>
 						<div className="control">
-							<input type="email"  id="email" className="input"/>
+							<input 
+								type="email"  
+								id="email" 
+								className="input"
+								value={email}
+								onChange={emailInputHandler}
+								placeholder="E-mail"
+							/>
 						</div>
 
 						<label className="label has-text-light">Message</label>
 						<div className="control">
-							<textarea id="comments" className="textarea" rows="4"/>
+							<textarea 
+								id="comments" 
+								className="textarea" 
+								rows="4"
+								value={message}
+								onChange={messageInputHandler}
+								placeholder="Your inquiries..."
+							/>
 						</div>
 						<hr/>
-						<Button fullwidth={true} outlined={true} color="dark" className="has-text-light">Submit</Button>
+						<Button type="button" onClick={submitFormClickHandler} fullwidth={true} outlined={true} color="dark" className="has-text-light">Submit</Button>
 					</form>
 				</Columns.Column>
 				<Columns.Column className="has-text-right" size={5}>

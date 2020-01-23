@@ -39,6 +39,10 @@
   max-width: 50vw;
 }
 
+::placeholder{
+  opacity: 0.4;
+}
+
 #img{
   padding: 3rem;
 }
