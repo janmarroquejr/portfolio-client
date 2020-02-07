@@ -10,6 +10,13 @@ const About = () => {
 			<div className="about-me">
 				<Columns size={12}>
 					<Columns.Column>
+
+						<div id="img" >
+							<img src="/images/pic.png" alt="null"/>
+						</div>
+
+					</Columns.Column>
+					<Columns.Column>
 						<div className="about-inner">
 		
 							<Heading size={4} subtitle>
@@ -22,13 +29,6 @@ const About = () => {
 						</div>
 					</Columns.Column>
 
-				<Columns.Column>
-
-					<div id="img" >
-						<img src="/images/pic.png" alt="null"/>
-					</div>
-
-				</Columns.Column>
 			</Columns>
 		</div>
 
@@ -38,7 +38,7 @@ const About = () => {
 		
 		<div className="about-me">
 			<div className="skills">
-			<Columns size={8}>
+			<Columns size={12}>
 				<Columns.Column size={1} className="logo-container">
 					<img src="/images/html.png" className="logo"/>
 				</Columns.Column>
@@ -63,11 +63,11 @@ const About = () => {
 				<Columns.Column size={1} className="logo-container">
 					<img src="/images/heroku.png" className="logo"/>
 				</Columns.Column>
-			</Columns>
+			
 				
 
-			<Columns size={8}>
-				
+			
+	
 				<Columns.Column size={1} className="logo-container">
 					<img src="/images/react.png" className="logo"/>
 				</Columns.Column>

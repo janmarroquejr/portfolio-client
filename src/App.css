@@ -32,6 +32,22 @@
   }
 }
 
+@media only screen and (max-device-width: 768px){
+  
+  .logo{
+  max-height: 10px;
+  max-width: 10px;
+}
+
+  .logo-container{
+    margin: 23px;
+  }
+  .skills{
+  margin-left: 3rem;
+}
+
+}
+
 #img img{
   border-radius: 50%;
   border: 1px solid black;

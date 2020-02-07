@@ -80,9 +80,11 @@ const Contact = () => {
       <Heading size={1} className="has-text-light">
         Contact Me
       </Heading>
+
       <Columns size={12}>
+      <Columns.Column size={1}>
         <div className="social-network social-circle">
-          <Columns.Column size={2}>
+          
             <a
               href="http://www.facebook.com/janmur"
               target="_blank"
@@ -92,8 +94,8 @@ const Contact = () => {
             >
               <i className="fab fa-facebook"></i>
             </a>
-          </Columns.Column>
-          <Columns.Column size={2}>
+          
+          
             <a
               href="http://www.twitter.com/janmarroquejr"
               target="_blank"
@@ -103,8 +105,7 @@ const Contact = () => {
             >
               <i class="fab fa-twitter"></i>
             </a>
-          </Columns.Column>
-          <Columns.Column size={2}>
+          
             <a
               href="https://www.linkedin.com/in/janmar-roque-029611197/"
               target="_blank"
@@ -114,8 +115,7 @@ const Contact = () => {
             >
               <i class="fab fa-linkedin"></i>
             </a>
-          </Columns.Column>
-          <Columns.Column size={2}>
+          
             <a
               href="http://www.instagram.com/janmarroquejr"
               target="_blank"
@@ -125,10 +125,10 @@ const Contact = () => {
             >
               <i className="fab fa-instagram"></i>
             </a>
-          </Columns.Column>
+          
         </div>
-
-        <Columns.Column className="has-text-left" size={5}>
+        </Columns.Column>
+        <Columns.Column className="has-text-left" size={6}>
           <form id="myForm">
             <label className="label has-text-light">Name</label>
             <div className="control">
