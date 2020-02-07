@@ -35,8 +35,8 @@ const Projects = () => {
 				<Columns.Column>
 					<Heading size={2}>
 						
-							<a href="https://arcane-eyrie-90382.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-								My third project
+							<a href="https://bnb2020.herokuapp.com/bookinglist" target="_blank" rel="noopener noreferrer">
+								Bed&Breakfast++
 							</a>
 						
 					</Heading>
