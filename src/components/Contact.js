@@ -84,7 +84,7 @@ const Contact = () => {
       <Columns size={12}>
       <Columns.Column size={1}>
         <div className="social-network social-circle">
-          
+          <div className="social-wrapper">
             <a
               href="http://www.facebook.com/janmur"
               target="_blank"
@@ -125,7 +125,7 @@ const Contact = () => {
             >
               <i className="fab fa-instagram"></i>
             </a>
-          
+            </div>
         </div>
         </Columns.Column>
         <Columns.Column className="has-text-left" size={6}>
