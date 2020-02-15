@@ -50,19 +50,31 @@ const HeroFooter = props => {
   return (
     <Hero.Head>
       <Tabs fullwidth={true} type="boxed">
-        <Tabs.Tab onClick={clickEventLanding} active={landing}>
+        {/* <Tabs.Tab
+          onClick={clickEventLanding}
+          active={landing}
+          className="nav-tabs"
+        >
           <p className="links has-text-light">Landing</p>
-        </Tabs.Tab>
+        </Tabs.Tab> */}
 
-        <Tabs.Tab onClick={clickEventAbout} active={about}>
+        <Tabs.Tab onClick={clickEventAbout} active={about} className="nav-tabs">
           <p className="links has-text-light">About</p>
         </Tabs.Tab>
 
-        <Tabs.Tab onClick={clickEventContact} active={contact}>
+        <Tabs.Tab
+          onClick={clickEventContact}
+          active={contact}
+          className="nav-tabs"
+        >
           <p className="links has-text-light">Contact</p>
         </Tabs.Tab>
 
-        <Tabs.Tab onClick={clickEventProjects} active={projects}>
+        <Tabs.Tab
+          onClick={clickEventProjects}
+          active={projects}
+          className="nav-tabs"
+        >
           <p className="links has-text-light">Projects</p>
         </Tabs.Tab>
       </Tabs>

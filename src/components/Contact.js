@@ -76,7 +76,7 @@ const Contact = () => {
   };
 
   return (
-    <Container className="has-text-center animated bounceInDown" fluid>
+    <Container className="has-text-center animated bounceInDown">
       <Heading size={1} className="has-text-light">
         Contact Me
       </Heading>
@@ -127,7 +127,7 @@ const Contact = () => {
             </div>
           </div>
         </Columns.Column>
-        <Columns.Column className="has-text-left" size={6}>
+        <Columns.Column className="has-text-left" size={6} className="form">
           <form id="myForm">
             <label className="label has-text-light">Name</label>
             <div className="control">

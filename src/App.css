@@ -24,7 +24,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(7, 1fr);
   grid-gap: 1em;
 }
 
@@ -38,6 +38,7 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
   }
+
   .social-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -48,6 +49,43 @@
   .social-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-tabs {
+    font-size: 8px;
+  }
+
+  .form {
+    max-width: 300px;
+  }
+
+  #gmap {
+    max-width: 280px;
+  }
+
+  .social-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .logo-container {
+    max-height: auto;
+    max-width: 60px;
+    margin: 2rem;
+    float: right;
+  }
+
+  .logo {
+    max-height: 20px;
+    max-width: 20px;
+    padding: 1.5rem;
   }
 }
 
