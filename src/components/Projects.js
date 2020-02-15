@@ -41,7 +41,7 @@ const Projects = () => {
 						
 					</Heading>
 					<Heading size={6} subtitle className="project-sub has-text-light">
-						Booking website.
+						Room booking website using MERN-G Stack. Hosted on Heroku.
 					</Heading>
 				</Columns.Column>
 			</Columns>
