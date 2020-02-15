@@ -82,51 +82,50 @@ const Contact = () => {
       </Heading>
 
       <Columns size={12}>
-      <Columns.Column size={1}>
-        <div className="social-network social-circle">
-          <div className="social-wrapper">
-            <a
-              href="http://www.facebook.com/janmur"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icoFacebook"
-              title="Facebook"
-            >
-              <i className="fab fa-facebook"></i>
-            </a>
-          
-          
-            <a
-              href="http://www.twitter.com/janmarroquejr"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="icoTwitter"
-              title="Twitter"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-          
-            <a
-              href="https://www.linkedin.com/in/janmar-roque-029611197/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="icoLinkedin"
-              title="Linkedin"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-          
-            <a
-              href="http://www.instagram.com/janmarroquejr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icoInstagram"
-              title="Instagram"
-            >
-              <i className="fab fa-instagram"></i>
-            </a>
+        <Columns.Column size={1}>
+          <div className="social-network social-circle">
+            <div className="social-wrapper">
+              <a
+                href="http://www.facebook.com/janmur"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icoFacebook"
+                title="Facebook"
+              >
+                <i className="fab fa-facebook"></i>
+              </a>
+
+              <a
+                href="http://www.twitter.com/janmarroquejr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="icoTwitter"
+                title="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/janmar-roque-029611197/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="icoLinkedin"
+                title="Linkedin"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+
+              <a
+                href="http://www.instagram.com/janmarroquejr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icoInstagram"
+                title="Instagram"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
             </div>
-        </div>
+          </div>
         </Columns.Column>
         <Columns.Column className="has-text-left" size={6}>
           <form id="myForm">
