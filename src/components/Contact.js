@@ -32,47 +32,64 @@ const Contact = () => {
       errorHandler++;
     }
 
-    console.log(errorHandler);
-
-    fetch("http://infinite-castle-42364.herokuapp.com/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
-    })
-      .then(res => {
-        return res.json();
-      })
-      .then(res => {
-        console.log(res.data.message);
-
-        if (res.data.message === "message_not_sent" || errorHandler > 0) {
-          if (res.data.message === "message_not_sent") {
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "An error occurred while sending your message! :("
-            });
-          }
-          if (errorHandler > 0) {
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "Please make sure you fill in all fields."
-            });
-          }
-        } else {
-          Swal.fire({
-            icon: "success",
-            title: "Great!",
-            text: "Your message was sent!"
-          });
-        }
-        setName("");
-        setEmail("");
-        setMessage("");
+    if (errorHandler === 0) {
+      Swal.fire({
+        title: "Sending message...",
+        showConfirmButton: false
       });
+      fetch("http://infinite-castle-42364.herokuapp.com/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      })
+        .then(res => {
+          return res.json();
+        })
+        .then(res => {
+          console.log(res.data.message);
+
+          if (res.data.message === "message_not_sent" || errorHandler > 0) {
+            if (res.data.message === "message_not_sent") {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "An error occurred while sending your message! :(",
+                showConfirmButton: false,
+                timer: 1500
+              });
+            }
+            if (errorHandler > 0) {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Please make sure you fill in all fields.",
+                showConfirmButton: false,
+                timer: 1500
+              });
+            }
+          } else {
+            Swal.fire({
+              icon: "success",
+              title: "Your message was sent!",
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
+          setName("");
+          setEmail("");
+          setMessage("");
+        });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please make sure you fill in all fields.",
+        showConfirmButton: false,
+        timer: 3000
+      });
+    }
   };
 
   return (
