@@ -7,11 +7,9 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  let errorHandler = 0;
 
   const nameInputHandler = e => {
     setName(e.target.value);
-    console.log(name);
   };
 
   const emailInputHandler = e => {
@@ -48,8 +46,6 @@ const Contact = () => {
           return res.json();
         })
         .then(res => {
-          console.log(res.data.message);
-
           if (res.data.message === "message_not_sent" || errorHandler > 0) {
             if (res.data.message === "message_not_sent") {
               Swal.fire({
