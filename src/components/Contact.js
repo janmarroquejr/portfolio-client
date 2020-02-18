@@ -35,7 +35,7 @@ const Contact = () => {
         title: "Sending message...",
         showConfirmButton: false
       });
-      fetch("http://infinite-castle-42364.herokuapp.com/send", {
+      fetch("https://infinite-castle-42364.herokuapp.com/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
